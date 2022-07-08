@@ -1,0 +1,55 @@
+programa
+{
+	inclua biblioteca Util --> u
+	inteiro 
+matrizSoma[4][5],  numerosGerados,linhas, colunas, somaLinhas[4], soma =0,x =0
+	funcao inicio()
+	{
+		para(linhas=0; linhas<4; linhas++)
+		{
+			
+			para(colunas =0 ; colunas <5 ; colunas++)
+			{
+				matrizSoma[linhas][colunas] = 1
+				/*
+				se(linhas <4)
+				{
+					matrizSoma[linhas][colunas] = 1
+					somaLinhas[linhas] = somaLinhas[linhas] + matrizSoma[linhas][colunas]
+				}senao
+				{
+					somaLinhas[linhas] = somaLinhas[linhas] + matrizSoma[linhas-1][colunas]
+				}
+				*/
+					
+				somaLinhas[linhas] = somaLinhas[linhas] + matrizSoma[linhas][colunas]
+			}
+				
+		}
+
+		// EXIBIR VALORES DA MATRIZ
+		para(linhas=0; linhas<4; linhas++)
+		{
+			
+			para(colunas =0 ; colunas <5 ; colunas++)
+			{
+				se(colunas >3)
+				{
+					
+					escreva(matrizSoma[linhas][colunas],":)\n")
+				}
+				senao
+				{
+					escreva(matrizSoma[linhas][colunas]," ")
+				}  
+			}
+				
+		}
+		escreva("\n \n \n")
+		para(colunas =0; colunas <4; colunas++)
+		{
+			escreva(somaLinhas[colunas],"\n")
+		}
+		
+	}
+}
