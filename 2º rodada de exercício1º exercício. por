@@ -1,33 +1,22 @@
 programa
 {
 	inclua biblioteca Util --> u
-	inteiro 
-matrizSoma[4][5],  numerosGerados,linhas, colunas, somaLinhas[4],somaColunas[5], soma =0,x =0
+	inteiro matrizSoma[4][5],  numerosGerados,linhas, colunas, somaLinhas[4],somaColunas[5], soma =0,x =0
 	funcao inicio()
 	{
+		// somar os valores das linhas
 		para(linhas=0; linhas<4; linhas++)
-		{
-			
+		{	
 			para(colunas =0 ; colunas <5 ; colunas++)
 			{
-				matrizSoma[linhas][colunas] = linhas
-				
-				se(linhas <4)
-				{
-					//matrizSoma[linhas][colunas] = 1
-					somaColunas[linhas] = somaLinhas[linhas] + matrizSoma[linhas][colunas]
-				}senao
-				{
-					somaColunas[linhas] = somaLinhas[linhas] + matrizSoma[linhas-1][colunas]
-					
-				}
-				
-					
+				matrizSoma[linhas][colunas] = u.sorteia(1,29)	
 				somaLinhas[linhas] = somaLinhas[linhas] + matrizSoma[linhas][colunas]
-				
+				somaColunas[colunas] = somaColunas[colunas] + matrizSoma[linhas][colunas]					
 			}
+			
 				
 		}
+		
 
 		// EXIBIR VALORES DA MATRIZ
 		para(linhas=0; linhas<4; linhas++)
@@ -48,10 +37,16 @@ matrizSoma[4][5],  numerosGerados,linhas, colunas, somaLinhas[4],somaColunas[5],
 				
 		}
 		escreva("\n \n \n")
-		para(colunas =0; colunas <4; colunas++)
+		para(linhas =0; linhas <4; linhas++)
 		{
-			escreva("Linhas somadas ",somaLinhas[colunas],"\n")
+			escreva(linhas +1," Linhas somadas ",somaLinhas[linhas],"\n")
 		}
+		escreva("\n \n \n")
+		para(colunas =0; colunas <5; colunas++)
+		{
+			escreva(colunas +1, " Colunasomadas ",somaColunas[colunas],"\n") 
+		}
+		
 		
 	}
 }
