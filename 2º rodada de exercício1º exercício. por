@@ -9,7 +9,7 @@ programa
 		{	
 			para(colunas =0 ; colunas <5 ; colunas++)
 			{
-				matrizSoma[linhas][colunas] = u.sorteia(1,29)	
+				matrizSoma[linhas][colunas] = u.sorteia(10,30)	
 				somaLinhas[linhas] = somaLinhas[linhas] + matrizSoma[linhas][colunas]
 				somaColunas[colunas] = somaColunas[colunas] + matrizSoma[linhas][colunas]					
 			}
@@ -24,27 +24,39 @@ programa
 			
 			para(colunas =0 ; colunas <5 ; colunas++)
 			{
-				se(colunas >3)
+
+				
+				se(colunas ==0)
 				{
 					
-					escreva(matrizSoma[linhas][colunas],"\n")
+					escreva(" Valores da linha ", linhas+1,"º somados ",matrizSoma[linhas][colunas]," + ")
+				}
+			
+				
+				senao se(colunas >3)
+				{
+					
+					escreva(matrizSoma[linhas][colunas]," = ",somaLinhas[linhas]," \n")
 				}
 				senao
 				{
-					escreva(matrizSoma[linhas][colunas]," ")
+					escreva(matrizSoma[linhas][colunas]," + ")
 				}  
 			}
 				
 		}
+
+		/*
 		escreva("\n \n \n")
 		para(linhas =0; linhas <4; linhas++)
 		{
 			escreva(linhas +1," Linhas somadas ",somaLinhas[linhas],"\n")
 		}
-		escreva("\n \n \n")
+		*/
+		escreva(" \n")
 		para(colunas =0; colunas <5; colunas++)
 		{
-			escreva(colunas +1, " Colunasomadas ",somaColunas[colunas],"\n") 
+			escreva(colunas +1, "º Coluna somada ",somaColunas[colunas],"\n") 
 		}
 		
 		
