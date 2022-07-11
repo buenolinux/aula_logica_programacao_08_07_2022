@@ -9,10 +9,10 @@ Por exemplo, o usuário digita o número 4 e o programa mostra:
 
 */
 	cadeia nomesDosmeses[3][13]
-	cadeia nomeMes[] = {"janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro",  "dezembro"}
-	cadeia abreviacao[] = {"jan", "fev", "mar", "abr", "maio", "jun", "jul", "ago", "set", "out", "nov", "dez"}
+	cadeia nomeMes[] = {"Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro",  "Dezembro"}
+	cadeia abreviacao[] = {"Jan", "Fev", "Mar", "Abr", "Maio", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"}
 	cadeia mesesEmIngles[] ={"January", "February", "March","April","May","June","July","August"," September","October","November","December"}
-	cadeia exibirMeses[] = {"","",""}
+	cadeia exibirMeses = ""
 	inteiro linhas, colunas,mesEscolhido
 	funcao inicio()
 	{
@@ -44,17 +44,13 @@ Por exemplo, o usuário digita o número 4 e o programa mostra:
 			{
 				se(mesEscolhido == colunas)
 				{
-					exibirMeses[colunas] = exibirMeses[colunas] +  nomesDosmeses[linhas][colunas] +" "
-					
+					 exibirMeses =  exibirMeses +  nomesDosmeses[linhas][colunas] +" "
 					pare
 				}
 			}	
 		}
-		//escreva(colunas," → ",exibirMeses, ", ",exibirMeses2,", ",exibirMeses3)	
-		para(linhas=0; linhas<=2; linhas++)
-		{
-			escreva(exibirMeses[linhas],"  ")
-		}
+		
+		escreva(colunas," → ",exibirMeses)	
 		
 	}
 }
