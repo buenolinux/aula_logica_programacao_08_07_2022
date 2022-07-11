@@ -6,7 +6,7 @@ programa
 valores contidos nas linhas de A passam a ser os valores das colunas de B.
 
 */
-	inteiro a[5][6],b[5][6]
+	inteiro a[5][6],b[6][5]
 	inteiro linhas, colunas
 	funcao inicio()
 	{
@@ -16,9 +16,9 @@ para(linhas =0 ; linhas<5; linhas++)
 			para(colunas =0; colunas<6; colunas++)
 			{
 				a[linhas][colunas] = u.sorteia(10, 50)
-				se(colunas>=5)
+				se(linhas==5)
 				{
-					//b[linhas][colunas] = a[linhas][colunas]
+					b[colunas+1][linhas-2] = a[linhas][colunas]
 				}
 				senao
 				{
@@ -40,9 +40,9 @@ para(linhas =0 ; linhas<5; linhas++)
 			escreva("\n")
 		}
 		escreva("\n")
-		para(linhas =0 ; linhas<5; linhas++)
+		para(linhas =0 ; linhas<6; linhas++)
 		{
-			para(colunas =0; colunas<6; colunas++)
+			para(colunas =0; colunas<5; colunas++)
 			{
 				escreva(b[linhas][colunas]," " )
 			}
