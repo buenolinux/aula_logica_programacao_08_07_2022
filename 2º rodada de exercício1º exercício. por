@@ -17,7 +17,7 @@ das médias finais e das porcentagens de frequência.
 	inteiro linhas, colunas
 	funcao inicio()
 	{
-		para(linhas = 0; linhas<4; linhas++)
+		para(linhas = 0; linhas<3; linhas++)
 		{
 			para(colunas =0; colunas<10; colunas++)
 			{
@@ -50,16 +50,18 @@ das médias finais e das porcentagens de frequência.
 			}
 		}
 		
-		/*para(linhas = 0; linhas <=3; linhas++)
+		para(linhas = 0; linhas <=3; linhas++)
 		{
 			para(colunas = 0; colunas<10; colunas++)
 			{
 				//soma = soma + alunos[linhas][colunas]
 				//alunos[3][linhas] = soma
 				
-				 alunos[linhas][colunas]  = alunos[linhas][colunas] + alunos[linhas][colunas]
+				// alunos[linhas][colunas]  = alunos[linhas][colunas] + alunos[linhas][colunas]
+				escreva(alunos[linhas][colunas]," ")
 			}
+			escreva("\n")
 		}
-		*/
+		
 	}
 }
