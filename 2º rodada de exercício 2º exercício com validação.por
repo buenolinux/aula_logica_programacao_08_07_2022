@@ -40,8 +40,14 @@ Por exemplo, o usuário digita o número 4 e o programa mostra:
 		leia(mesEscolhido)
 		para(linhas=0; linhas<3; linhas++)
 		{
-			para(colunas=0;colunas <12; colunas++)
+			se((mesEscolhido < 1) ou (mesEscolhido > 12))
 			{
+				escreva("Digite um número entre 1 e 12 \n ")
+				pare	
+			}
+			para(colunas=0;colunas <13; colunas++)
+			{
+				
 				se(mesEscolhido == colunas)
 				{
 					 exibirMeses =  exibirMeses +  nomesDosmeses[linhas][colunas] +" "
@@ -49,8 +55,9 @@ Por exemplo, o usuário digita o número 4 e o programa mostra:
 				}
 			}	
 		}
-		
-		escreva(colunas," → ",exibirMeses)	
-		
+		se((mesEscolhido > 0) e  (mesEscolhido < 13))
+		{	
+			escreva(colunas," → ",exibirMeses)	
+		}
 	}
 }
